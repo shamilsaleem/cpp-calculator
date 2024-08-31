@@ -4,12 +4,11 @@ using namespace std;
 
 int main()
 {
-	int first_number;   // First integer
-	int second_number;  // Second integer
-	int math_operator;       // Mathematical operator
-
 	while(true)
 	{
+		double first_number;   // First integer
+		double second_number;  // Second integer
+		double math_operator;  // Mathematical operator
 
 		cout << "Enter your first number: "; // Prompting for first number.
 		cin >> first_number;
@@ -25,8 +24,7 @@ int main()
 
 		cin >> math_operator;
 
-		using namespace calculator;
-		cout << "Answer is " << calculate(first_number, second_number, math_operator) << endl << endl;
+		calculate(first_number, second_number, math_operator);
 
 	}
 

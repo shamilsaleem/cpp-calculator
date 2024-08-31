@@ -1,29 +1,38 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
 
-namespace calculator
+using namespace std;
+
+int calculate(double first_number, double second_number, int math_operator)
 {
-	int calculate(int first_number, int second_number, int math_operator)
-{
+	double result;
 	switch(math_operator)
 	{
 		case 1:
-			return(first_number + second_number);
+			result = first_number + second_number;
 		    break;
 		case 2:
-			return(first_number - second_number);
+			result = first_number - second_number;
 		    break;
 		case 3:
-			return(first_number * second_number);
+			result = first_number * second_number;
 		    break;
 		case 4:
-			return(first_number / second_number);
+			if (second_number == 0)
+			{
+				cout << "Can't divisible by zero." << endl << endl;
+				return 1;
+			}
+			else
+			{
+				result = first_number / second_number;
+			}
 			break;
 		default:
-			return 0;
+			result = 0;
 	}
-}
-
+	cout << result << endl << endl;
+	return 0;
 }
 
 #endif // CALCULATOR_H
