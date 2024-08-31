@@ -8,23 +8,27 @@ int main()
 	int second_number;  // Second integer
 	int math_operator;       // Mathematical operator
 
-	cout << "Enter your first number: "; // Prompting for first number.
-	cin >> first_number;
+	while(true)
+	{
 
-	cout << "Enter your second number: "; // Prompting for first number.
-	cin >> second_number;
+		cout << "Enter your first number: "; // Prompting for first number.
+		cin >> first_number;
 
-	cout << "1. Addition(+)\n" 
-		 << "2. Substraction(-)\n" 
-		 << "3. Multiplication(x)\n" 
-		 << "4. Division(/)\n" 
-		 << "Select an operation: ";
+		cout << "Enter your second number: "; // Prompting for first number.
+		cin >> second_number;
 
-	cin >> math_operator;
+		cout << "1. Addition(+)\n" 
+			 << "2. Substraction(-)\n" 
+			 << "3. Multiplication(x)\n" 
+			 << "4. Division(/)\n" 
+			 << "Select an operation: ";
 
-	using namespace calculator;
-	cout << "Answer is " << calculate(first_number, second_number, math_operator) << endl;
+		cin >> math_operator;
 
+		using namespace calculator;
+		cout << "Answer is " << calculate(first_number, second_number, math_operator) << endl << endl;
+
+	}
 
 	return 0;
 }
